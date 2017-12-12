@@ -1,0 +1,29 @@
+= simple_form_for @project do |f|
+  = f.error_notification
+  .ui.form
+    .ui.basic.segment
+      %h2.ui.header Datos proyecto
+      .ui.divider
+      .two.fields
+        .field
+          = f.input :name
+        .field
+          = f.input :commune
+      .three.fields
+        .field
+          = f.input :origin_visit
+        .field
+          = f.input :date_visit, as: :string
+        .field
+          = f.input :line
+      .field
+        = f.input :idi
+      .three.fields
+        .field
+          = f.input :visit_id, as: :string
+        .field
+          = f.input :visit_booklet
+        .field
+          = f.input :report_made
+
+      = f.button :submit, class: 'ui primary button'

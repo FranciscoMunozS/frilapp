@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Frilapp
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    = render 'assets/nav'
+    = render 'assets/sidebar'
+    .ui.container
+      .pusher
+        = yield

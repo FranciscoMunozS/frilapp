@@ -1,0 +1,13 @@
+.ui.fixed.menu
+  - if user_signed_in?
+    .ui.container
+      .item
+        %img(src="https://semantic-ui.com/images/logo.png" alt="")
+      .right.menu
+        %a= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: 'item'
+  - else
+    .ui.container
+      .item
+        %img(src="https://semantic-ui.com/images/logo.png" alt="")
+      .right.menu
+        %a= link_to "Iniciar sesión", new_user_session_path, class: 'item'
