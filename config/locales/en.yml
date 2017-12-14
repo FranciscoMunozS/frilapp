@@ -30,4 +30,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      project:
+        create: "Crear proyecto"
+        update: "Actualizar proyecto"
+  activerecord:
+    attributes:
+      project:
+        name: "Nombre proyecto"
+        commune: "Comuna"
+        origin_visit: "Origen de visita"
+        date_visit: "Fecha de visita"
+        line: "Linea FRIL"
+        idi: "Codigo IDI"
+        tracing: "Seguimiento"
+        visit_id: "Codigo visita"
+        visit_booklet: "Cartilla de visita"
+        report_made: "Informe de cometido"
+        file: "Adjunto de cartilla de visita"
+        attachment: "Adjunto de informe de cometido"
+        observations: "Observaciones"

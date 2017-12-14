@@ -1,15 +1,19 @@
-<h2>Log in</h2>
+<div class="ui two column centered grid">
+  <div class="column">
+    <div class="ui basic segment">
+      <h1 class="ui centered header">Iniciar sesión</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="ui form">
+          <div class="field">
+            <%= f.input :email, required: false, autofocus: true, label: false, placeholder: 'Correo electronico' %>
+          </div>
+          <div class="field">
+            <%= f.input :password, required: false, label: false, placeholder: 'Contraseña' %>
+          </div>
+          <%= f.button :submit, "Iniciar sesión", class: 'ui fluid teal button' %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
