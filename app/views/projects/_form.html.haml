@@ -26,4 +26,6 @@
         .field
           = f.input :report_made
 
-      = f.button :submit, class: 'ui primary button'
+      = button_tag(type: 'submit', class: 'ui secondary button') do
+        %i.plus.icon
+        Agregar proyecto
