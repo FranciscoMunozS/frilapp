@@ -1,0 +1,10 @@
+%h2.ui.header
+  Proyectos
+.ui.divider
+.ui.styled.fluid.accordion
+  - @projects.each do |project|
+    .title
+      %i.dropdown.icon
+      = project.name
+    .content
+      %p
